@@ -1,0 +1,27 @@
+{
+  "name": "bundle",
+  "version": "1.0.0",
+  "description": "a library created by microbundle",
+  "main": "dist/index.umd.js",
+  "source": "src/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle",
+    "build-modern": "microbundle src/index.js -f modern,umd",
+    "dev": "microbundle watch",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-lerna-changelog": "^2.0.2",
+    "lerna": "^3.18.4"
+  }
+}
